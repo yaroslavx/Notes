@@ -9,10 +9,10 @@ namespace Notes.Application.Notes.Queries.GetNoteDetails;
 
 public class GetNoteDetailsQueryHandler : IRequestHandler<GetNoteDetailsQuery, NoteDetailsVm>
 {
-    private readonly INoteDbContext _context;
+    private readonly INotesDbContext _context;
     private readonly IMapper _mapper;
     
-    public GetNoteDetailsQueryHandler(INoteDbContext context, IMapper mapper)
+    public GetNoteDetailsQueryHandler(INotesDbContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;

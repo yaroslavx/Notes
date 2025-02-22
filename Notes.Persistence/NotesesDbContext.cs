@@ -5,11 +5,11 @@ using Notes.Persistence.EntityTypeConfigurations;
 
 namespace Notes.Persistence;
 
-public class NotesDbContext : DbContext, INoteDbContext
+public class NotesesDbContext : DbContext, INotesDbContext
 {
     public DbSet<Note>  Notes { get; set; }
 
-    public NotesDbContext(DbContextOptions<NotesDbContext> options) : base(options)
+    public NotesesDbContext(DbContextOptions<NotesesDbContext> options) : base(options)
     {
     }
 

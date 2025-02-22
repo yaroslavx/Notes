@@ -8,9 +8,9 @@ namespace Notes.Application.Notes.Commands.UpdateNote;
 
 public class UpdateNoteCommandHandler : IRequestHandler<UpdateNoteCommand>
 {
-    private readonly INoteDbContext _context;
+    private readonly INotesDbContext _context;
     
-    public UpdateNoteCommandHandler(INoteDbContext context)
+    public UpdateNoteCommandHandler(INotesDbContext context)
     {
         _context = context;
     }

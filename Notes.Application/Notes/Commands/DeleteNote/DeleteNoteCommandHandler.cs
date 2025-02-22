@@ -7,9 +7,9 @@ namespace Notes.Application.Notes.Commands.DeleteNote;
 
 public class DeleteNoteCommandHandler : IRequestHandler<DeleteNoteCommand>
 {
-    private readonly INoteDbContext _context;
+    private readonly INotesDbContext _context;
     
-    public DeleteNoteCommandHandler(INoteDbContext context)
+    public DeleteNoteCommandHandler(INotesDbContext context)
     {
         _context = context;
     }
