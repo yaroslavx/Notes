@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,8 +10,9 @@ using Notes.Application.Notes.Queries.GetNoteList;
 
 namespace Notes.WebApi.Controllers;
 
+[ApiVersionNeutral]
 [Produces("application/json")]
-[Route("api/[controller]")]
+[Route("api/{version:apiVersion}/[controller]")]
 public class NoteController : BaseController
 {
     private readonly IMapper _mapper;
